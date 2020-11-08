@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B063A00D-8AC4-4FD9-922E-7DB5F0E6BD8E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intelligent_Calculator_Core</RootNamespace>
+    <AssemblyName>Intelligent Calculator-Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Calculator.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DoThi\Expression.cs" />
+    <Compile Include="DoThi\ExpressionHelper.cs" />
+    <Compile Include="DoThi\ExpressionPlotter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DoThi\ExpressionPlotter.Designer.cs">
+      <DependentUpon>ExpressionPlotter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoThi\frmGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoThi\frmGraph.Designer.cs">
+      <DependentUpon>frmGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoThi\IEvaluatable.cs" />
+    <Compile Include="DoThi\frmMainDoThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoThi\frmMainDoThi.Designer.cs">
+      <DependentUpon>frmMainDoThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoThi\Settings.cs" />
+    <Compile Include="DoThi\frmThemBotBieuThucDoThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoThi\frmThemBotBieuThucDoThi.Designer.cs">
+      <DependentUpon>frmThemBotBieuThucDoThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoThi\frmThongTinDoThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoThi\frmThongTinDoThi.Designer.cs">
+      <DependentUpon>frmThongTinDoThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChinhHop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChinhHop.Designer.cs">
+      <DependentUpon>frmChinhHop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChuyenDoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChuyenDoi.Designer.cs">
+      <DependentUpon>frmChuyenDoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCTTQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCTTQ.Designer.cs">
+      <DependentUpon>frmCTTQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDaoHam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDaoHam.Designer.cs">
+      <DependentUpon>frmDaoHam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmB2ChiaB1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmB2ChiaB1.Designer.cs">
+      <DependentUpon>frmB2ChiaB1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmB3ChiaB1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmB3ChiaB1.Designer.cs">
+      <DependentUpon>frmB3ChiaB1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmB4ChiaB1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmB4ChiaB1.Designer.cs">
+      <DependentUpon>frmB4ChiaB1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBPTB22.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBPTB22.Designer.cs">
+      <DependentUpon>frmBPTB22.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBPTB21.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBPTB21.Designer.cs">
+      <DependentUpon>frmBPTB21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBPTB31.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBPTB31.Designer.cs">
+      <DependentUpon>frmBPTB31.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBPTB32.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBPTB32.Designer.cs">
+      <DependentUpon>frmBPTB32.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBPTB41.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBPTB41.Designer.cs">
+      <DependentUpon>frmBPTB41.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBPTB42.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBPTB42.Designer.cs">
+      <DependentUpon>frmBPTB42.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHonSo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHonSo.Designer.cs">
+      <DependentUpon>frmHonSo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHPTXY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHPTXY.Designer.cs">
+      <DependentUpon>frmHPTXY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHPTXYZ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHPTXYZ.Designer.cs">
+      <DependentUpon>frmHPTXYZ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHPTXYDangCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHPTXYDangCap.Designer.cs">
+      <DependentUpon>frmHPTXYDangCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainIC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainIC.Designer.cs">
+      <DependentUpon>frmMainIC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMinMaxHS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMinMaxHS.Designer.cs">
+      <DependentUpon>frmMinMaxHS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNhiThuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhiThuc.Designer.cs">
+      <DependentUpon>frmNhiThuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPhanSo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhanSo.Designer.cs">
+      <DependentUpon>frmPhanSo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPTB1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPTB1.Designer.cs">
+      <DependentUpon>frmPTB1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPTB2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPTB2.Designer.cs">
+      <DependentUpon>frmPTB2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPTB3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPTB3.Designer.cs">
+      <DependentUpon>frmPTB3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPTB4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPTB4.Designer.cs">
+      <DependentUpon>frmPTB4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPTLG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPTLG.Designer.cs">
+      <DependentUpon>frmPTLG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSNT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSNT.Designer.cs">
+      <DependentUpon>frmSNT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongTin.Designer.cs">
+      <DependentUpon>frmThongTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmToHop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmToHop.Designer.cs">
+      <DependentUpon>frmToHop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUCLN_BCNN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUCLN_BCNN.Designer.cs">
+      <DependentUpon>frmUCLN_BCNN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogxy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogxy.Designer.cs">
+      <DependentUpon>frmLogxy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhap.Designer.cs">
+      <DependentUpon>frmNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmTichPhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTichPhan.Designer.cs">
+      <DependentUpon>frmTichPhan.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DoThi\frmGraph.resx">
+      <DependentUpon>frmGraph.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoThi\frmMainDoThi.resx">
+      <DependentUpon>frmMainDoThi.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoThi\frmThemBotBieuThucDoThi.resx">
+      <DependentUpon>frmThemBotBieuThucDoThi.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoThi\frmThongTinDoThi.resx">
+      <DependentUpon>frmThongTinDoThi.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChinhHop.resx">
+      <DependentUpon>frmChinhHop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChuyenDoi.resx">
+      <DependentUpon>frmChuyenDoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCTTQ.resx">
+      <DependentUpon>frmCTTQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDaoHam.resx">
+      <DependentUpon>frmDaoHam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmB2ChiaB1.resx">
+      <DependentUpon>frmB2ChiaB1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmB3ChiaB1.resx">
+      <DependentUpon>frmB3ChiaB1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmB4ChiaB1.resx">
+      <DependentUpon>frmB4ChiaB1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBPTB22.resx">
+      <DependentUpon>frmBPTB22.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBPTB21.resx">
+      <DependentUpon>frmBPTB21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBPTB31.resx">
+      <DependentUpon>frmBPTB31.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBPTB32.resx">
+      <DependentUpon>frmBPTB32.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBPTB41.resx">
+      <DependentUpon>frmBPTB41.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBPTB42.resx">
+      <DependentUpon>frmBPTB42.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHonSo.resx">
+      <DependentUpon>frmHonSo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHPTXY.resx">
+      <DependentUpon>frmHPTXY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHPTXYZ.resx">
+      <DependentUpon>frmHPTXYZ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHPTXYDangCap.resx">
+      <DependentUpon>frmHPTXYDangCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainIC.resx">
+      <DependentUpon>frmMainIC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMinMaxHS.resx">
+      <DependentUpon>frmMinMaxHS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhiThuc.resx">
+      <DependentUpon>frmNhiThuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhanSo.resx">
+      <DependentUpon>frmPhanSo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPTB1.resx">
+      <DependentUpon>frmPTB1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPTB2.resx">
+      <DependentUpon>frmPTB2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPTB3.resx">
+      <DependentUpon>frmPTB3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPTB4.resx">
+      <DependentUpon>frmPTB4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPTLG.resx">
+      <DependentUpon>frmPTLG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSNT.resx">
+      <DependentUpon>frmSNT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongTin.resx">
+      <DependentUpon>frmThongTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmToHop.resx">
+      <DependentUpon>frmToHop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUCLN_BCNN.resx">
+      <DependentUpon>frmUCLN_BCNN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogxy.resx">
+      <DependentUpon>frmLogxy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhap.resx">
+      <DependentUpon>frmNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="frmTichPhan.resx">
+      <DependentUpon>frmTichPhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Calculator.ico" />
+    <None Include="Resources\Zoomout.png" />
+    <None Include="Resources\ZoomOut Y.png" />
+    <None Include="Resources\ZoomOut X.png" />
+    <None Include="Resources\Zoomin..png" />
+    <None Include="Resources\Zoomin Y.png" />
+    <None Include="Resources\ZoomIn X.png" />
+    <None Include="Resources\up.png" />
+    <None Include="Resources\tichPhanpic.png" />
+    <None Include="Resources\text.png" />
+    <None Include="Resources\scale.png" />
+    <None Include="Resources\right.png" />
+    <None Include="Resources\Refresh%28PNG%29.png" />
+    <None Include="Resources\rectangular.png" />
+    <None Include="Resources\range.png" />
+    <None Include="Resources\polarup.png" />
+    <None Include="Resources\polarDown.png" />
+    <None Include="Resources\polar.png" />
+    <None Include="Resources\origin.png" />
+    <None Include="Resources\OK%28PNG%29.png" />
+    <None Include="Resources\nt3.png" />
+    <None Include="Resources\nt2.png" />
+    <None Include="Resources\nt1.png" />
+    <None Include="Resources\logXY.png" />
+    <None Include="Resources\left.png" />
+    <None Include="Resources\infoPNG.png" />
+    <None Include="Resources\info.PNG.png" />
+    <None Include="Resources\hptDangCap.png" />
+    <None Include="Resources\helpPNG.png" />
+    <None Include="Resources\helpPNG %282%29.png" />
+    <None Include="Resources\grid.png" />
+    <None Include="Resources\exitPNG.png" />
+    <None Include="Resources\down.png" />
+    <None Include="Resources\disk.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\day5.png" />
+    <None Include="Resources\day4.png" />
+    <None Include="Resources\day3.png" />
+    <None Include="Resources\day2.png" />
+    <None Include="Resources\day1.png" />
+    <None Include="Resources\daoHam.png" />
+    <None Include="Resources\copy.png" />
+    <None Include="Resources\closePNG.png" />
+    <None Include="Resources\calculator.jpg" />
+    <None Include="Resources\appgraph.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
